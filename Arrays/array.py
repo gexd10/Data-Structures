@@ -1,4 +1,3 @@
-
 class Array:
     def __init__(self, capacity=10):
         self._data = [None] * capacity
