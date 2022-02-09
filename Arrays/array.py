@@ -37,6 +37,12 @@ class Array:
         if index < 0 or index >= self._size:
             raise ValueError("Index is illegal")
         self._data[index] = e
+
+    def getLast(self):
+        return self.get(self._size - 1)
+
+    def getFirst(self):
+        return self.get(0)
     
     def contains(self, e):
         for i in range(self._size):
@@ -57,7 +63,7 @@ class Array:
         for i in range(index + 1, self._size):
             self._data[i - 1] = self._data[i]
         self._size -= 1
-
+        # len(self._data)如果为1，len(self._data) // 2就会为0，不合理
         if self._size == len(self._data) // 4 and len(self._data) // 2 != 0:
             self._resize(len(self._data) // 2)
         return ret
@@ -82,24 +88,24 @@ class Array:
     def __str__(self):
         return str('<Array> : {}, capacity: {}, size: {}'.format(self._data[0:self._size], self.getCapacity(), self.getSize()))
 
-arr = Array()
+# arr = Array()
 
-for i in range(10):
-    arr.addLast(i)
+# for i in range(10):
+#     arr.addLast(i)
     
-print(arr.__str__())
-print(arr.add(1, 100))
-print(arr.__str__())
-print(arr.addFirst(-1))
-print(arr.__str__())
-print(arr.remove(2))
-print(arr.__str__())
-print(arr.removeElement(4))
-print(arr.__str__())
-print(arr.removeFirst())
-print(arr.__str__())
-print(arr.removeFirst())
-print(arr.removeFirst())
-print(arr.removeFirst())
-print(arr.removeFirst())
-print(arr.__str__())
+# print(arr.__str__())
+# print(arr.add(1, 100))
+# print(arr.__str__())
+# print(arr.addFirst(-1))
+# print(arr.__str__())
+# print(arr.remove(2))
+# print(arr.__str__())
+# print(arr.removeElement(4))
+# print(arr.__str__())
+# print(arr.removeFirst())
+# print(arr.__str__())
+# print(arr.removeFirst())
+# print(arr.removeFirst())
+# print(arr.removeFirst())
+# print(arr.removeFirst())
+# print(arr.__str__())
