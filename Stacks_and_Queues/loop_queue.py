@@ -3,6 +3,7 @@ sys.path.append(os.getcwd())
 
 from Stacks_and_Queues.queue_int import Queue
 from Stacks_and_Queues.array_queue import ArrayQueue
+from LinkedList.linkedlistqueue import LinkedListQueue
 
 class LoopQueue(Queue):
 
@@ -84,7 +85,9 @@ def test_Queue(q, opCount):
 opCount = 20000
 array_queue = ArrayQueue()
 loop_queue = LoopQueue()
+linkedlist_queue = LinkedListQueue()
 
 
-print('LoopQueue enqueue: ', test_Queue(loop_queue, opCount))
-print('ArrayQueue enqueue: ', test_Queue(array_queue, opCount))
+print('LoopQueue time: ', test_Queue(loop_queue, opCount))
+print('ArrayQueue time: ', test_Queue(array_queue, opCount))
+print('linkedlist_queue time: ', test_Queue(linkedlist_queue, opCount))
