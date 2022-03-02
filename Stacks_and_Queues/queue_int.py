@@ -12,5 +12,5 @@ class Queue:
     def getFront(self):
         raise NotImplementedError
 
-    def enqueue(self):
+    def enqueue(self, e):
         raise NotImplementedError

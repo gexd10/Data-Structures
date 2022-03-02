@@ -1,16 +1,16 @@
-class Stack:
+class Set:
 
-    def getSize(self):
+    def add(self, e):
         raise NotImplementedError
 
     def isEmpty(self):
         raise NotImplementedError
 
-    def pop(self):
+    def getSize(self):
         raise NotImplementedError
 
-    def peek(self):
+    def remove(self, e):
         raise NotImplementedError
 
-    def push(self, e):
+    def contains(self,e):
         raise NotImplementedError
